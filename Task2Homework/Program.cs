@@ -7,21 +7,10 @@ Console.WriteLine("Введите первое число: ");
 int num1 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите второе число: ");
 int num2 = Convert.ToInt32(Console.ReadLine());
-int max = 0;
-int min = 0;
+int max = num1;
+int min = num2;
 
-if (num1 > num2)
-{
-    max = num1;
-    min = num2;
-
-    Console.Write("max = ");
-    Console.Write(num1);
-    Console.Write(" ");
-    Console.Write("min = ");
-    Console.Write(num2);
-}
-else
+if (num2 > num1)
 {
     max = num2;
     min = num1;
@@ -31,4 +20,12 @@ else
     Console.Write(" ");
     Console.Write("min = ");
     Console.Write(num1);
+}
+else
+{
+    Console.Write("max = ");
+    Console.Write(num1);
+    Console.Write(" ");
+    Console.Write("min = ");
+    Console.Write(num2);
 }

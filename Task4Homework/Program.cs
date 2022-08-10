@@ -9,15 +9,8 @@ Console.WriteLine("Введите второе число: ");
 int num2 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите третье число: ");
 int num3 = Convert.ToInt32(Console.ReadLine());
-int max = 0;
+int max = num1;
 
-if (num1 > num2 & num1 > num3)
-{
-    max = num1;
-
-    Console.Write("max = ");
-    Console.Write(num1);
-}
 if (num2 > num1 & num2 > num3)
 {
     max = num2;
@@ -25,18 +18,24 @@ if (num2 > num1 & num2 > num3)
     Console.Write("max = ");
     Console.Write(num2);
 }
-if (num3 > num1 & num3 > num2)
+else if (num3 > num1 & num3 > num2)
 {
     max = num3;
 
     Console.Write("max = ");
     Console.Write(num3);
 }
+else
+{
+    Console.Write("max = ");
+    Console.Write(num1);
+}
+
 
 // Console.WriteLine("Введите числа через пробел: "); //Для большего количества значений
 // int[] array = Console.ReadLine().Split(" ").Select(int.Parse).ToArray();
 // int i = 0;
-// int max = 0;
+// int max = array [0]; //После семинара присвоил max не 0, а значение массива под нулевым индексом. Перепроверил - ВРОДЕ ВСЕ ИСПРАВНО РАБОТАЕТ :)
 
 // while (i < array.Length)
 // {
